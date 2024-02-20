@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_animated/generated/assets.dart';
+import 'package:login_animated/pages/home/widgets/category_view.dart';
 
 class HomeTop extends StatelessWidget {
   final Animation<double> containerGrow;
@@ -62,6 +63,7 @@ class HomeTop extends StatelessWidget {
                 ),
               ),
             ),
+            const CategoryView(),
           ],
         ),
       ),
