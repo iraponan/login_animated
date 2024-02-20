@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage>
         seconds: 2,
       ),
     );
+    _controller.forward();
   }
 
   @override
