@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_animated/pages/login/widgets/form_container.dart';
+import 'package:login_animated/pages/login/widgets/sign_up_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -34,6 +36,8 @@ class _LoginPageState extends State<LoginPage> {
                         fit: BoxFit.contain,
                       ),
                     ),
+                    const FormContainer(),
+                    const SignUpButton(),
                   ],
                 ),
               ],
