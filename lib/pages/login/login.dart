@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:login_animated/generated/assets.dart';
+import 'package:login_animated/pages/home/home_page.dart';
 import 'package:login_animated/pages/login/widgets/form_container.dart';
 import 'package:login_animated/pages/login/widgets/sign_up_button.dart';
 import 'package:login_animated/pages/login/widgets/stagger_animation.dart';
-import 'package:flutter/scheduler.dart' show timeDilation;
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,7 +22,11 @@ class _LoginPageState extends State<LoginPage>
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
-    );
+    )..addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const HomePage()));
+      }
+    });
   }
 
   @override
@@ -33,7 +37,6 @@ class _LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    //timeDilation = 20;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
