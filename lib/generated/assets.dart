@@ -4,7 +4,7 @@ class Assets {
 
   static const String iconIcon = 'assets/icon/icon.png';
   static const String imagesBackground = 'assets/images/background.jpg';
-  static const String imagesPerfil = 'assets/images/perfil.jpg';
+  static const String imagesPerfil = 'assets/images/perfil.png';
   static const String imagesTickicon = 'assets/images/tickicon.png';
 
 }

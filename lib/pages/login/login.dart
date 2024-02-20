@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_animated/generated/assets.dart';
 import 'package:login_animated/pages/login/widgets/form_container.dart';
 import 'package:login_animated/pages/login/widgets/sign_up_button.dart';
 import 'package:login_animated/pages/login/widgets/stagger_animation.dart';
@@ -20,7 +21,7 @@ class _LoginPageState extends State<LoginPage>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 2),
     );
   }
 
@@ -37,7 +38,7 @@ class _LoginPageState extends State<LoginPage>
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background.jpg'),
+            image: AssetImage(Assets.imagesBackground),
             fit: BoxFit.cover,
           ),
         ),
@@ -51,8 +52,7 @@ class _LoginPageState extends State<LoginPage>
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 70, bottom: 32),
-                      child: Image.asset(
-                        'assets/images/tickicon.png',
+                      child: Image.asset(Assets.imagesTickicon,
                         width: 150,
                         height: 150,
                         fit: BoxFit.contain,
