@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 4),
     );
   }
 
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    //timeDilation = 1;
+    //timeDilation = 20;
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
